@@ -2,9 +2,14 @@
 from flask import Blueprint
 
 from sklearn.metrics.pairwise import pairwise_distances
+from tensorflow.python.platform import gfile
 from scipy import misc
 import tensorflow as tf
+import numpy as np
 import detect_and_align
+import argparse
+import time
+import cv2
 import os
 import base64
 import requests
@@ -12,8 +17,8 @@ import json
 from json_tricks import dumps
 import random
 import string
-from flask import request
-from flask import jsonify
+
+
 
 # Import the database object from the main app module
 from app import db
