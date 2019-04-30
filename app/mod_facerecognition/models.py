@@ -2,6 +2,9 @@
 # We will define this inside /app/__init__.py in the next sections.
 from app import db
 
+# Import password / encryption helper tools
+from werkzeug import check_password_hash, generate_password_hash
+
 
 class User(db.Model):
     __tablename__ = 'users'
@@ -16,7 +19,7 @@ class User(db.Model):
         self.username = username
         self.name = name
         self.embeddings = embeddings
-        self.password = password
+        self.password = generate_password_hash(password)
 
     def __repr__(self):
         return "<User(id=%d, username='%s', name='%s', password='%s', embeddings='%s')>" % \
@@ -31,4 +34,5 @@ class User(db.Model):
             'embeddings': self.embeddings
         }
 
-
+    def check_password(self, password):
+        check_password_hash(self.password, password)

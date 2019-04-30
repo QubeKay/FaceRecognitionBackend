@@ -1,32 +1,45 @@
-# Import flask and template operators
-from flask import Flask, render_template
+
 
 from flask_sqlalchemy import SQLAlchemy
-# from flask.ext.sqlalchemy import SQLAlchemy
 
-# Define the WSGI application object
-app = Flask(__name__)
+# from facial.model import User
+# FaceRecognition/README.md at master · habrman/FaceRecognition · GitHub
 
+# CREATE USER 'facerecogn_app'@'localhost' IDENTIFIED BY 'r3c0gn1z3u5pl3@s3';
+
+
+# Flask files: BEGIN
+from flask import Flask
+# import pickle
+from flask import request, render_template, jsonify
+# Import a module / component using its blueprint handler variable (mod_facerecognition)
+from app.mod_facerecognition.controllers import mod_facerecognition as facerecognition_module
+
+
+application = Flask(__name__)
+application.config.from_object(__name__)
 # Configurations
-app.config.from_object('config')
+application.config.from_object('config')
+application.config.update(dict(
+    JSONIFY_PRETTYPRINT_REGULAR=False
+))
+application.config.from_envvar('FLASK_SERVER_SETTINGS', silent=True)
+application.config['SQLALCHEMY_DATABASE_URI'] = \
+    "mysql+pymysql://facerecogn_app:r3c0gn1z3u5pl3%40s3@localhost:3508/FACERECOGNITION?charset=utf8"
+# application.config['MYSQL_DATABASE_PORT'] = 3508
+application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(application)
 
-# Define the database object which is imported
-# by modules and controllers
-db = SQLAlchemy(app)
 
-# Sample HTTP error handling
-@app.errorhandler(404)
+@application.errorhandler(404)
 def not_found(error):
     return render_template('404.html'), 404
 
-# Import a module / component using its blueprint handler variable (mod_auth)
-from app.mod_auth.controllers import mod_auth as auth_module
 
 # Register blueprint(s)
-app.register_blueprint(auth_module)
+application.register_blueprint(facerecognition_module)
 # app.register_blueprint(xyz_module)
 # ..
 
-# Build the database:
-# This will create the database file using SQLAlchemy
-db.create_all()
+if __name__ == '__main__':
+    application.run(host='0.0.0.0')
