@@ -1,4 +1,5 @@
-
+# Import a module / component using its blueprint handler variable (mod_facerecognition)
+from app.mod_facerecognition.controllers import mod_facerecognition as facerecognition_module
 
 from flask_sqlalchemy import SQLAlchemy
 
@@ -12,11 +13,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, request, render_template, jsonify
 # import pickle
 app = Flask(__name__)
-
-# Import a module / component using its blueprint handler variable (mod_facerecognition)
-from app.mod_facerecognition.controllers import mod_facerecognition as facerecognition_module
-
-
 
 app.config.from_object(__name__)
 # Configurations
