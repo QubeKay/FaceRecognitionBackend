@@ -1,5 +1,7 @@
 # Import flask dependencies
-from flask import Blueprint
+from flask import Blueprint, request, jsonify
+from flask import Flask
+import pickle
 
 from sklearn.metrics.pairwise import pairwise_distances
 from tensorflow.python.platform import gfile
