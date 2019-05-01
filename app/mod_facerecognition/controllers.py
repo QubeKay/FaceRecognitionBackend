@@ -8,7 +8,7 @@ from tensorflow.python.platform import gfile
 from scipy import misc
 import tensorflow as tf
 import numpy as np
-import detect_and_align
+from app.mod_face_utils import detect_and_align
 import argparse
 import time
 import cv2
