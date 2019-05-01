@@ -1,17 +1,10 @@
 # Import flask dependencies
 from flask import Blueprint, request, jsonify
-from flask import Flask
-import pickle
 
 from sklearn.metrics.pairwise import pairwise_distances
-from tensorflow.python.platform import gfile
 from scipy import misc
 import tensorflow as tf
-import numpy as np
 from app.mod_face_utils import detect_and_align
-import argparse
-import time
-import cv2
 import os
 import base64
 import requests
@@ -19,11 +12,6 @@ import json
 from json_tricks import dumps
 import random
 import string
-
-
-
-# Import the database object from the main app module
-from app import db
 
 # Import module forms
 # from app.mod_auth.forms import LoginForm
@@ -54,6 +42,8 @@ def save_user():
 
     if type(output_vector_128) is str:
         try:
+            # Import the database object from the main app module
+            from app import db
             user = User(username=username, password=password, name=name, embeddings=output_vector_128)
             db.session.add(user)
             db.session.commit()
@@ -67,7 +57,7 @@ def save_user():
 
 
 @mod_facerecognition.route('/users/')
-def users():
+def get_users():
     users = User.query.all()
     return dumps([user.to_dict() for user in users])
 
