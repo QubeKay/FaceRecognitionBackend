@@ -4,7 +4,7 @@ from flask import Blueprint, request, jsonify
 from sklearn.metrics.pairwise import pairwise_distances
 from scipy import misc
 import tensorflow as tf
-from app.mod_face_utils import detect_and_align
+import app.mod_face_utils.detect_and_align as detect_and_align
 import os
 import base64
 import requests
@@ -13,8 +13,7 @@ from json_tricks import dumps
 import random
 import string
 
-# Import module forms
-# from app.mod_auth.forms import LoginForm
+from app.extensions import db
 
 # Import module models (i.e. User)
 from app.mod_facerecognition.models import User
@@ -42,8 +41,6 @@ def save_user():
 
     if type(output_vector_128) is str:
         try:
-            # Import the database object from the main app module
-            from app import db
             user = User(username=username, password=password, name=name, embeddings=output_vector_128)
             db.session.add(user)
             db.session.commit()

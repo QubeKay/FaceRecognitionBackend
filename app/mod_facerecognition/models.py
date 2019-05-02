@@ -1,6 +1,6 @@
-# Import the database object (db) from the main application module
+# Import the database object (app.db) from the main application module
 # We will define this inside /app/__init__.py in the next sections.
-from app import db
+from app.extensions import db
 
 # Import password / encryption helper tools
 from werkzeug import check_password_hash, generate_password_hash
