@@ -5,7 +5,7 @@ from app.mod_facerecognition.controllers import mod_facerecognition as facerecog
 
 
 # from facial.model import User
-# FaceRecognition/README.md at master · habrman/FaceRecognition · GitHub
+# FaceRecognition/README.md at master | habrman/FaceRecognition | GitHub
 
 # CREATE USER 'facerecogn_app'@'localhost' IDENTIFIED BY 'r3c0gn1z3u5pl3@s3';
 
