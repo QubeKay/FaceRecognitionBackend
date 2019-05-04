@@ -104,7 +104,7 @@ def convert_and_save(b64_string, image_path='upload_image.png'):
 
 def get_image_as_128vector(image_base64):
     temp_image_name = get_random_string() + '.png'
-    image_path = './.temp_images/' + temp_image_name
+    image_path = '/var/www/facerecognition/FaceRecognitionBackend/.temp_images/' + temp_image_name
 
     convert_and_save(image_base64, image_path)
 
