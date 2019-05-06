@@ -22,7 +22,7 @@ from app.mod_facerecognition.models import User
 mod_facerecognition = Blueprint('facerecognition', __name__, url_prefix='/facerecognition')
 
 
-DISTANCE_THRESHOLD = 0.6
+DISTANCE_THRESHOLD = 1.0
 SERVER_URL = "http://178.128.35.109:8501/v1/models/facerecognition_model:predict"
 
 
