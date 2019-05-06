@@ -70,7 +70,6 @@ def authentication():
     username = request.get_json()['username']
     user = User.query.filter_by(username=username).first()
 
-    print(image_base64)
     vector_128 = get_image_as_128vector(image_base64)
 
     if type(vector_128) is str:
