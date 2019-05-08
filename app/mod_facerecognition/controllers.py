@@ -30,6 +30,7 @@ SERVER_URL = "http://178.128.35.109:8501/v1/models/facerecognition_model:predict
 def save_user():
     # global mtcnn
     response_message = 'Default error message'
+    response_status = False
 
     # grabbing a set of features from the request's body
     image_base64 = request.get_json()['image']
@@ -45,12 +46,15 @@ def save_user():
             db.session.add(user)
             db.session.commit()
             response_message = "Successfully saved new user!"
+            response_status = True
         except:
             response_message = "DB Error: Could not save user, try another username!"
     else:
         response_message = "An error occurred while trying to get face embeddings from AI model!"
 
-    return response_message
+    data = {"success": response_status, "message": response_message}
+
+    return jsonify(data)
 
 
 @mod_facerecognition.route('/users/')
