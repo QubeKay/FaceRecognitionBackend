@@ -4,7 +4,6 @@
     <list default="true" id="6897158d-f83d-4873-9260-79827430c5ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mod_facerecognition/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mod_facerecognition/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
+            <state relative-caret-position="603">
+              <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
               <folding>
                 <element signature="e#28#73#0" expanded="true" />
               </folding>
@@ -280,14 +279,27 @@
       <option name="project" value="LOCAL" />
       <updated>1557297286650</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Support both username+password authentication and username+face authentication methods...">
+      <created>1557456718626</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1557456718626</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Support both username+password authentication and username+face authentication methods... ++ BUG FIX">
+      <created>1557457160727</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1557457160727</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -320,7 +332,9 @@
     <MESSAGE value="Debug image saved with size 0 if uploaded from Android" />
     <MESSAGE value="Debug image saved with size 0 if uploaded from Android++ resolved: base64 string did not have NO_WRAP flag set" />
     <MESSAGE value="Make ../facerecognition/save_user/ return JSON instead of string response" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make ../facerecognition/save_user/ return JSON instead of string response" />
+    <MESSAGE value="Support both username+password authentication and username+face authentication methods..." />
+    <MESSAGE value="Support both username+password authentication and username+face authentication methods... ++ BUG FIX" />
+    <option name="LAST_COMMIT_MESSAGE" value="Support both username+password authentication and username+face authentication methods... ++ BUG FIX" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/templates/facerecognition/index.html">
@@ -436,8 +450,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
+        <state relative-caret-position="603">
+          <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
           <folding>
             <element signature="e#28#73#0" expanded="true" />
           </folding>

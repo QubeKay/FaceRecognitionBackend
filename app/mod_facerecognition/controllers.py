@@ -69,23 +69,25 @@ def authentication():
     status = False
     response_message = "Unknown authentication request! Use either username and password OR username and face."
 
-    if 'image' in request and 'username' in request:
-        data = auth_by_face(request)
-    elif 'password' in request and 'username' in request:
-        data = auth_by_password(request)
+    request_json = request.get_json()
+
+    if 'image' in request_json and 'username' in request_json:
+        data = auth_by_face(request_json)
+    elif 'password' in request_json and 'username' in request_json:
+        data = auth_by_password(request_json)
     else:
         data = {"success": status, "message": response_message, "user": None}
 
     return jsonify(data)
 
 
-def auth_by_password(request):
+def auth_by_password(request_json):
     status = False
     response_message = "Incorrect username or password!"
 
     # grabbing a username and password from the request's body
-    password = request.get_json()['password']
-    username = request.get_json()['username']
+    password = request_json['password']
+    username = request_json['username']
     user = User.query.filter_by(username=username).first()
 
     if user is not None and user.check_password(password):
@@ -98,13 +100,13 @@ def auth_by_password(request):
     return data
 
 
-def auth_by_face(request):
+def auth_by_face(request_json):
     status = False
     response_message = "Failed to recognize that face! Try again in different angle, lighting, and/or camera distance."
 
     # grabbing a set of features from the request's body
-    image_base64 = request.get_json()['image']
-    username = request.get_json()['username']
+    image_base64 = request_json['image']
+    username = request_json['username']
     user = User.query.filter_by(username=username).first()
 
     vector_128 = get_image_as_128vector(image_base64)
