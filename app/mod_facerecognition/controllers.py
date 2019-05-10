@@ -67,7 +67,44 @@ def get_users():
 def authentication():
 
     status = False
-    response_message = "Failed to match faces!"
+    response_message = "Unknown authentication request! Use either username and password OR username and face."
+
+    password = request.get_json()['password']
+    image_base64 = request.get_json()['image']
+    username = request.get_json()['username']
+
+    if image_base64 is not None and username is not None:
+        data = auth_by_face(request)
+    elif password is not None and username is not None:
+        data = auth_by_password(request)
+    else:
+        data = {"success": status, "message": response_message, "user": None}
+
+    return jsonify(data)
+
+
+def auth_by_password(request):
+    status = False
+    response_message = "Incorrect username or password!"
+
+    # grabbing a username and password from the request's body
+    password = request.get_json()['password']
+    username = request.get_json()['username']
+    user = User.query.filter_by(username=username).first()
+
+    if user is not None and user.check_password(password):
+        status = True
+        response_message = "Successfully authenticated user!"
+
+    user_data = {"name": user.name}
+    data = {"success": status, "message": response_message, "user": user_data}
+
+    return data
+
+
+def auth_by_face(request):
+    status = False
+    response_message = "Failed to recognize that face! Try again in different angle, lighting, and/or camera distance."
 
     # grabbing a set of features from the request's body
     image_base64 = request.get_json()['image']
@@ -83,15 +120,12 @@ def authentication():
 
         if distance_matrix[0][0] < DISTANCE_THRESHOLD:
             status = True
-            response_message = "Successfully matched faces!"
+            response_message = "Successfully authenticated your face!"
 
-    data = {"success": status, "message": response_message}
+    user_data = {"name": user.name}
+    data = {"success": status, "message": response_message, "user": user_data}
 
-    # data = {}
-    # data['success'] = status
-    # data['message'] = response_message
-
-    return jsonify(data)
+    return data
 
 
 def get_random_string():

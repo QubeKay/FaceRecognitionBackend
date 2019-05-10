@@ -35,4 +35,4 @@ class User(db.Model):
         }
 
     def check_password(self, password):
-        check_password_hash(self.password, password)
+        return check_password_hash(self.password, password)
