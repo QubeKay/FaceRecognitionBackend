@@ -69,13 +69,9 @@ def authentication():
     status = False
     response_message = "Unknown authentication request! Use either username and password OR username and face."
 
-    password = request.get_json()['password']
-    image_base64 = request.get_json()['image']
-    username = request.get_json()['username']
-
-    if image_base64 is not None and username is not None:
+    if 'image' in request and 'username' in request:
         data = auth_by_face(request)
-    elif password is not None and username is not None:
+    elif 'password' in request and 'username' in request:
         data = auth_by_password(request)
     else:
         data = {"success": status, "message": response_message, "user": None}
