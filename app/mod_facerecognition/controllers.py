@@ -48,7 +48,7 @@ def save_user():
             response_message = "Successfully saved new user!"
             response_status = True
         except:
-            response_message = "DB Error: Could not save user, try another username!"
+            response_message = "Could not save user, try another username!"
     else:
         response_message = "An error occurred while trying to get face embeddings from AI model!"
 
