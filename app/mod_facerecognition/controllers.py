@@ -71,6 +71,7 @@ def save_articles():
 
     # grabbing a set of features from the request's body
     link = request.get_json()['link']
+    image = request.get_json()['image']
     name = request.get_json()['name']
     summary = request.get_json()['summary']
 
@@ -79,6 +80,7 @@ def save_articles():
     try:
         if article is not None:
             article.link = link
+            article.image = image
             article.summary = summary
             db.session.commit()
             response_message = "Successfully updated article details!"
