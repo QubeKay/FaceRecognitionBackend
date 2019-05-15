@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6897158d-f83d-4873-9260-79827430c5ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mod_facerecognition/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mod_facerecognition/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="77" column="63" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
+            <state relative-caret-position="311">
+              <caret line="123" column="11" selection-start-line="123" selection-start-column="11" selection-end-line="123" selection-end-column="11" />
               <folding>
                 <element signature="e#28#73#0" expanded="true" />
               </folding>
@@ -26,11 +25,32 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+              <folding>
+                <element signature="e#89#182#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/extensions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+            <state relative-caret-position="825">
+              <caret line="55" column="60" lean-forward="true" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
               <folding>
                 <element signature="e#139#168#0" expanded="true" />
               </folding>
@@ -70,9 +90,9 @@
         <option value="$PROJECT_DIR$/app/demo.py" />
         <option value="$PROJECT_DIR$/app/mod_face_recognition_utils/detect_and_align.py" />
         <option value="$PROJECT_DIR$/app/extensions.py" />
-        <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/mod_facerecognition/models.py" />
         <option value="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" />
+        <option value="$PROJECT_DIR$/app/__init__.py" />
       </list>
     </option>
   </component>
@@ -317,7 +337,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557913184366</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added methods to save article names and their link">
+      <created>1557913276448</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1557913276448</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Enabled DB to create all tables if they do not exist">
+      <created>1557913759236</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1557913759236</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -362,7 +396,8 @@
     <MESSAGE value="Support both username+password authentication and username+face authentication methods... ++ BUG FIX 2" />
     <MESSAGE value="Change error message response sent when user exists..." />
     <MESSAGE value="Added methods to save article names and their link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added methods to save article names and their link" />
+    <MESSAGE value="Enabled DB to create all tables if they do not exist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enabled DB to create all tables if they do not exist" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/templates/facerecognition/index.html">
@@ -419,9 +454,6 @@
     <entry file="file://$PROJECT_DIR$/app/mod_face_utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/mod_face_utils/detect_and_align.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8370">
@@ -442,15 +474,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="e#89#182#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -459,29 +484,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/extensions.py">
+    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        <state relative-caret-position="311">
+          <caret line="123" column="11" selection-start-line="123" selection-start-column="11" selection-end-line="123" selection-end-column="11" />
+          <folding>
+            <element signature="e#28#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        <state relative-caret-position="825">
+          <caret line="55" column="60" lean-forward="true" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
           <folding>
             <element signature="e#139#168#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
+    <entry file="file://$PROJECT_DIR$/app/extensions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="77" column="63" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
+        <state relative-caret-position="15">
+          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
-            <element signature="e#28#73#0" expanded="true" />
+            <element signature="e#89#182#0" expanded="true" />
           </folding>
         </state>
       </provider>
