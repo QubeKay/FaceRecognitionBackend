@@ -124,6 +124,7 @@ def authentication():
 
 def auth_by_password(request_json):
     status = False
+    user_data = None
     response_message = "Incorrect username or password!"
 
     # grabbing a username and password from the request's body
@@ -133,9 +134,9 @@ def auth_by_password(request_json):
 
     if user is not None and user.check_password(password):
         status = True
+        user_data = {"name": user.name}
         response_message = "Successfully authenticated user!"
 
-    user_data = {"name": user.name}
     data = {"success": status, "message": response_message, "user": user_data}
 
     return data
@@ -143,6 +144,7 @@ def auth_by_password(request_json):
 
 def auth_by_face(request_json):
     status = False
+    user_data = None
     response_message = "Failed to recognize that face! Try again in different angle, lighting, and/or camera distance."
 
     # grabbing a set of features from the request's body
@@ -162,13 +164,12 @@ def auth_by_face(request_json):
 
             if distance_matrix[0][0] < DISTANCE_THRESHOLD:
                 status = True
+                user_data = {"name": user.name}
                 response_message = "Successfully authenticated your face!"
 
     else:
         response_message = "Username does not exist!"
-        user = {"name": None}
 
-    user_data = {"name": user.name}
     data = {"success": status, "message": response_message, "user": user_data}
 
     return data
