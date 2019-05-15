@@ -74,14 +74,22 @@ def save_articles():
     name = request.get_json()['name']
     summary = request.get_json()['summary']
 
+    article = Article.query.filter_by(name=name).first()
+
     try:
-        article = Article(name=name, link=link, summary=summary)
-        db.session.add(article)
-        db.session.commit()
-        response_message = "Successfully saved new article!"
+        if article is not None:
+            article.link = link
+            article.summary = summary
+            db.session.commit()
+            response_message = "Successfully updated article details!"
+        else:
+            article = Article(name=name, link=link, summary=summary)
+            db.session.add(article)
+            db.session.commit()
+            response_message = "Successfully saved new article!"
         response_status = True
     except:
-        response_message = "Could not save article, try another name!"
+        response_message = "Could not save article, maybe try another name!"
 
     data = {"success": response_status, "message": response_message}
 
