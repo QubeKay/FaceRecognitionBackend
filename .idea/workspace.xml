@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6897158d-f83d-4873-9260-79827430c5ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mod_facerecognition/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mod_facerecognition/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-59">
-              <caret line="85" column="67" selection-start-line="85" selection-start-column="60" selection-end-line="85" selection-end-column="67" />
+            <state relative-caret-position="578">
+              <caret line="168" column="21" selection-start-line="168" selection-start-column="21" selection-end-line="168" selection-end-column="21" />
               <folding>
                 <element signature="e#28#73#0" expanded="true" />
               </folding>
@@ -25,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="826">
-              <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+            <state relative-caret-position="180">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
               <folding>
                 <element signature="e#139#168#0" expanded="true" />
               </folding>
@@ -70,8 +70,8 @@
         <option value="$PROJECT_DIR$/app/mod_face_recognition_utils/detect_and_align.py" />
         <option value="$PROJECT_DIR$/app/extensions.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
-        <option value="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" />
         <option value="$PROJECT_DIR$/app/mod_facerecognition/models.py" />
+        <option value="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" />
       </list>
     </option>
   </component>
@@ -351,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557914609763</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Fixed bug that was making article summary to be sent back as the link">
+      <created>1557926040461</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1557926040461</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -399,7 +406,8 @@
     <MESSAGE value="Enabled DB to create all tables if they do not exist" />
     <MESSAGE value="Enabled DB to create all tables if they do not exist ++ with app.app_context()" />
     <MESSAGE value="Save new article or edit existing..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Save new article or edit existing..." />
+    <MESSAGE value="Fixed bug that was making article summary to be sent back as the link" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug that was making article summary to be sent back as the link" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/templates/facerecognition/index.html">
@@ -503,22 +511,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
+    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <caret line="85" column="67" selection-start-line="85" selection-start-column="60" selection-end-line="85" selection-end-column="67" />
+        <state relative-caret-position="180">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
-            <element signature="e#28#73#0" expanded="true" />
+            <element signature="e#139#168#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/models.py">
+    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="826">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        <state relative-caret-position="578">
+          <caret line="168" column="21" selection-start-line="168" selection-start-column="21" selection-end-line="168" selection-end-column="21" />
           <folding>
-            <element signature="e#139#168#0" expanded="true" />
+            <element signature="e#28#73#0" expanded="true" />
           </folding>
         </state>
       </provider>

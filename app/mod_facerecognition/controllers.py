@@ -148,18 +148,25 @@ def auth_by_face(request_json):
     # grabbing a set of features from the request's body
     image_base64 = request_json['image']
     username = request_json['username']
+
     user = User.query.filter_by(username=username).first()
 
-    vector_128 = get_image_as_128vector(image_base64)
+    if user is not None:
 
-    if type(vector_128) is str:
-        vector_128 = json.loads(vector_128)
-        user_vector_128 = json.loads(user.embeddings)
-        distance_matrix = pairwise_distances([user_vector_128], [vector_128])
+        vector_128 = get_image_as_128vector(image_base64)
 
-        if distance_matrix[0][0] < DISTANCE_THRESHOLD:
-            status = True
-            response_message = "Successfully authenticated your face!"
+        if type(vector_128) is str:
+            vector_128 = json.loads(vector_128)
+            user_vector_128 = json.loads(user.embeddings)
+            distance_matrix = pairwise_distances([user_vector_128], [vector_128])
+
+            if distance_matrix[0][0] < DISTANCE_THRESHOLD:
+                status = True
+                response_message = "Successfully authenticated your face!"
+
+    else:
+        response_message = "Username does not exist!"
+        user = {"name": None}
 
     user_data = {"name": user.name}
     data = {"success": status, "message": response_message, "user": user_data}
