@@ -18,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
-              <caret line="77" column="30" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="30" />
+              <caret line="77" column="63" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
               <folding>
                 <element signature="e#28#73#0" expanded="true" />
               </folding>
@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="40" column="13" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="13" />
+            <state relative-caret-position="846">
+              <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
               <folding>
                 <element signature="e#139#168#0" expanded="true" />
               </folding>
@@ -310,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557823620005</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added methods to save article names and their link">
+      <created>1557913184365</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1557913184366</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -354,7 +361,8 @@
     <MESSAGE value="Support both username+password authentication and username+face authentication methods... ++ BUG FIX" />
     <MESSAGE value="Support both username+password authentication and username+face authentication methods... ++ BUG FIX 2" />
     <MESSAGE value="Change error message response sent when user exists..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change error message response sent when user exists..." />
+    <MESSAGE value="Added methods to save article names and their link" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added methods to save article names and their link" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/templates/facerecognition/index.html">
@@ -460,8 +468,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="13" />
+        <state relative-caret-position="846">
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
           <folding>
             <element signature="e#139#168#0" expanded="true" />
           </folding>
@@ -471,7 +479,7 @@
     <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
-          <caret line="77" column="30" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="30" />
+          <caret line="77" column="63" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
           <folding>
             <element signature="e#28#73#0" expanded="true" />
           </folding>

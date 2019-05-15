@@ -72,9 +72,10 @@ def save_articles():
     # grabbing a set of features from the request's body
     link = request.get_json()['link']
     name = request.get_json()['name']
+    summary = request.get_json()['summary']
 
     try:
-        article = Article(name=name, link=link)
+        article = Article(name=name, link=link, summary=summary)
         db.session.add(article)
         db.session.commit()
         response_message = "Successfully saved new article!"

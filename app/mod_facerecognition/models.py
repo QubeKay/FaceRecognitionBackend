@@ -44,18 +44,21 @@ class Article(db.Model):
     id = db.Column(db.Integer, db.Sequence('articles_id_seq'), primary_key=True, autoincrement=True)
     name = db.Column(db.String(120), unique=True)
     link = db.Column(db.Text())
+    summary = db.Column(db.Text())
 
-    def __init__(self, name=None, link=None):
+    def __init__(self, name=None, link=None, summary=None):
         self.name = name
         self.link = link
+        self.summary = summary
 
     def __repr__(self):
-        return "<User(id=%d, name='%s', link='%s')>" % \
-               (self.id, self.name, self.link)
+        return "<User(id=%d, name='%s', link='%s', summary='%s')>" % \
+               (self.id, self.name, self.link, self.summary)
 
     def to_dict(self):
         return {
             'id': self.id,
             'name': self.name,
-            'link': self.link
+            'link': self.link,
+            'link': self.summary
         }
