@@ -60,5 +60,5 @@ class Article(db.Model):
             'id': self.id,
             'name': self.name,
             'link': self.link,
-            'link': self.summary
+            'summary': self.summary
         }
