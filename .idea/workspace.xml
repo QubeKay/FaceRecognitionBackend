@@ -4,6 +4,7 @@
     <list default="true" id="6897158d-f83d-4873-9260-79827430c5ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mod_facerecognition/controllers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mod_facerecognition/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mod_facerecognition/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,12 +13,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="337">
+              <caret line="77" column="30" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="30" />
+              <folding>
+                <element signature="e#28#73#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -25,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+            <state relative-caret-position="531">
+              <caret line="40" column="13" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="13" />
               <folding>
                 <element signature="e#139#168#0" expanded="true" />
               </folding>
@@ -42,11 +46,13 @@
       <find>db</find>
       <find>app.db.</find>
       <find>temp_im</find>
+      <find>Articles</find>
     </findStrings>
     <replaceStrings>
       <replace>app</replace>
       <replace>app.db</replace>
       <replace>db.</replace>
+      <replace>Article</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -79,7 +85,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -106,6 +111,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -297,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557457378487</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Change error message response sent when user exists...">
+      <created>1557823620005</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1557823620005</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -340,7 +353,8 @@
     <MESSAGE value="Support both username+password authentication and username+face authentication methods..." />
     <MESSAGE value="Support both username+password authentication and username+face authentication methods... ++ BUG FIX" />
     <MESSAGE value="Support both username+password authentication and username+face authentication methods... ++ BUG FIX 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Support both username+password authentication and username+face authentication methods... ++ BUG FIX 2" />
+    <MESSAGE value="Change error message response sent when user exists..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change error message response sent when user exists..." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/templates/facerecognition/index.html">
@@ -444,19 +458,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
+    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="531">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="e#139#168#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/models.py">
+    <entry file="file://$PROJECT_DIR$/app/mod_facerecognition/controllers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        <state relative-caret-position="337">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="30" />
           <folding>
-            <element signature="e#139#168#0" expanded="true" />
+            <element signature="e#28#73#0" expanded="true" />
           </folding>
         </state>
       </provider>

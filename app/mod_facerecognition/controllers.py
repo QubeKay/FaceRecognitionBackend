@@ -16,7 +16,7 @@ import string
 from app.extensions import db
 
 # Import module models (i.e. User)
-from app.mod_facerecognition.models import User
+from app.mod_facerecognition.models import User, Article
 
 # Define the blueprint: 'facerecognition', set its url prefix: app.url/auth
 mod_facerecognition = Blueprint('facerecognition', __name__, url_prefix='/facerecognition')
@@ -62,12 +62,44 @@ def get_users():
     users = User.query.all()
     return dumps([user.to_dict() for user in users])
 
+
+@mod_facerecognition.route('/save_article/', methods=['POST'])
+def save_articles():
+    # global mtcnn
+    response_message = 'Default error message'
+    response_status = False
+
+    # grabbing a set of features from the request's body
+    link = request.get_json()['link']
+    name = request.get_json()['name']
+
+    try:
+        article = Article(name=name, link=link)
+        db.session.add(article)
+        db.session.commit()
+        response_message = "Successfully saved new article!"
+        response_status = True
+    except:
+        response_message = "Could not save article, try another name!"
+
+    data = {"success": response_status, "message": response_message}
+
+    return jsonify(data)
+
+
+@mod_facerecognition.route('/articles/')
+def get_articles():
+    articles = Article.query.all()
+    return dumps([article.to_dict() for article in articles])
+
+
 # Set the route and accepted methods
 @mod_facerecognition.route('/authenticate_user/', methods=['POST'])
 def authentication():
 
     status = False
-    response_message = "Unknown authentication request! Use either username and password OR username and face."
+    response_message = "Unknown authentication request! " \
+                       "Use either username and password OR username and face."
 
     request_json = request.get_json()
 

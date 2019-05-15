@@ -36,3 +36,26 @@ class User(db.Model):
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
+
+
+class Article(db.Model):
+    __tablename__ = 'articles'
+
+    id = db.Column(db.Integer, db.Sequence('articles_id_seq'), primary_key=True, autoincrement=True)
+    name = db.Column(db.String(120), unique=True)
+    link = db.Column(db.Text())
+
+    def __init__(self, name=None, link=None):
+        self.name = name
+        self.link = link
+
+    def __repr__(self):
+        return "<User(id=%d, name='%s', link='%s')>" % \
+               (self.id, self.name, self.link)
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'link': self.link
+        }
