@@ -21,6 +21,8 @@ flaskName = __name__
 
 def register_extensions(app):
     db.init_app(app)
+    db.create_all()
+    db.session.commit()
 
 
 def register_blueprints(app):
