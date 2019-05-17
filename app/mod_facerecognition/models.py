@@ -32,7 +32,7 @@ class User(db.Model):
             'name': self.name,
             'password': self.password,
             'embeddings': self.embeddings
-        }
+        } # some comment
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
